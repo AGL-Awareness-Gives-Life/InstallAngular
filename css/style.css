@@ -1,0 +1,467 @@
+*{  margin: 0px;
+    padding: 0px;}
+
+html, body{
+    font-size: 16px;
+    color: rgb(39, 39, 39);
+    margin: 0px;
+    padding: 0px;
+    height: 100vh !important;
+    max-height: 100vh !important;
+}    
+
+a{
+    text-decoration: none;
+    color: #373738;
+}
+
+a:hover{
+    color: #2d46e3;
+    text-decoration: none;
+}
+
+.svg_img{
+    width: 60% !important;
+    height:60% !important;
+}
+
+#header{
+    width: 100%;
+    background: linear-gradient(to right bottom, rgba(111, 138, 213, 0.8), rgba(40, 96, 180, 0.8)), url(../img/newbanner2.jpg) left top no-repeat;
+    /* background: linear-gradient(to right bottom, rgba(32, 103, 236, 0.822), rgba(0, 53, 88, 0.8)), url(../img/newbanner2.jpg) left top no-repeat; */
+    background-size: cover;
+    padding: 100px 0 100px 0;
+    text-align: center;
+    color: #fff;
+    }
+
+.description {
+    margin: 80px 0 40px;
+    text-align: center;
+    }     
+    
+.description h1{
+    font-weight: 500;
+    font-size: 93px;
+    line-height: 93px;
+    color: white;
+    text-shadow: 0 0px 12px rgba(36,36,36,0.55);
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.description span{
+    font-weight: 300;
+    font-size: 35px;
+    display: block;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    margin-bottom: 30px;
+    }    
+
+.big_button{
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 24px;
+    padding: 20px 65px;
+    border: 2px solid #6395ff;
+    background: linear-gradient(to right bottom, rgb(103, 136, 230), rgb(18, 79, 170));
+    display: inline-block;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    transition: 0.6s;
+}
+.big_button:focus,
+.big_button:hover{
+    color: #6395ff;
+    border: 2px solid #fff;
+    background: #fff;
+    text-decoration: none;
+}  
+
+
+.features{
+    text-align: left;
+    /* padding: 0 80px 0 80px; */
+    text-decoration: none;
+    }
+
+.feature {
+    font-weight: 300 !important;
+    color: #f4f6fd;
+    }
+
+    .feature h3{
+        color: #fff;
+    }
+.feature h3, p {
+    font-weight: 300 !important;
+        }    
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }        
+/* Section Starts here */
+
+#section{
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(103, 136, 230), rgb(18, 79, 170));
+    padding: 50px 0 50px 0;
+    text-align: left;
+    color: #fff;
+    border-top: #fff solid 1px;
+}
+
+.details_Description{
+    border-right: #fff solid 1px;
+    margin:0 0 20px 0;
+}
+.flexbox {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+
+/* footer */
+#footer{
+    padding: 12px 0;
+    width: 100%;
+    background: rgb(240, 239, 239);
+}
+
+.footer_title {
+    font-size: 20px;
+}
+.footer_right{
+    margin-top:15px;
+}
+
+
+/* Choose OS page */
+
+#chooseos_header{
+    width: 100%;
+    padding: 10px 0 15px 0;
+    color: #fff;
+    background:linear-gradient(to right bottom, #24c7dc, #514a9d);
+    border-bottom: #f4f6fd solid 2px;
+}
+
+#chooseos_header h1 a{
+    color: #fff;
+    font-size: 30px;
+}
+
+#chooseos_header h1 a:hover{
+    color: #fff;
+}
+
+#chooseos_section{
+    width: 100%;
+    background: linear-gradient(to right, #24c7dcaf, #514a9dc4), url(../img/newbanner1.jpg) left top no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+    /* border-top: rgb(26, 26, 26) solid 1px; */
+}
+
+#chooseos_section h3{
+    font-size: 35px;
+    line-height: 38px;
+    margin-bottom: 20px;
+    color:#fff;
+    font-weight: 400;
+    text-align: center;
+}
+
+#chooseos_section h5{
+    font-size: 22px;
+    line-height: 22px;
+    color:#fff;
+    text-align: center;
+}
+
+.details_chooseos{
+    margin:40px 0 20px 0;
+  }
+
+.details_chooseos h4 img{
+    text-align: center;
+}
+
+.choose_osflexbox {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+
+.chooseos_button{
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 10px 45px;
+    border: 1px solid #2d46e3;
+    background: linear-gradient(to right bottom, rgb(103, 136, 230), rgb(18, 79, 170));
+    display: inline-block;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    transition: 0.6s;
+}
+.chooseos_button:focus,
+.chooseos_button:hover{
+    color: #2d46e3;
+    border: 1px solid #2d46e3;
+    background: #fff;
+    text-decoration: none;
+}  
+
+/* Container new */
+.wrappernew{
+    justify-content: center;
+}
+
+
+/* Installer Windows */
+
+#install_window{
+    width: 100%;
+    display: flex;
+    background:  linear-gradient(to right, rgb(103, 136, 230), rgb(18, 79, 170));
+    background-size: cover;
+    padding: 50px 0 50px 0;
+    justify-content: center;
+    color:#fff;
+    border-top: #fff solid 1px;
+}
+
+#install_window h2{
+    font-size: 35px;
+    line-height: 38px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+#install_window ul{
+    list-style:none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#install_window li p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #fff;
+    text-align: left;
+    margin-top: 10px;
+    padding:10px 0;
+}
+
+#install_window li h2{
+    font-size: 35px;
+    line-height: 38px;
+    margin-bottom: 40px;
+    color: rgb(30, 36, 39);
+    text-align: center;
+}
+
+#install_window li h4{
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    text-align: left;
+    margin-top: 10px;
+    padding:10px 0;
+}
+
+#install_window li span{
+    font-size: 16px;
+    display: block;
+    font-weight: 300;
+    line-height: 18px;
+    color: rgb(206, 227, 255);
+    text-align: left;
+    margin-top: 10px;
+    
+}
+
+/* #install_window li span::before{
+    content: "•";
+    font-size: 20px;
+    margin-right: 3px;
+} */
+
+.codebgcolor{
+    background-color: #fff;
+    border-radius: 2px;
+    color:#000;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top:20px;
+}
+.container {
+    width: 1000px;
+}
+code{
+    background-color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    color:#000;
+    font-size: 17px;
+}
+
+.centered{
+    float: none;
+    margin: 0 auto;
+}
+
+
+/* Custom or standred install page css */
+
+.custom_installsection{
+    width:100%;
+    background: linear-gradient(to right bottom, rgba(110, 161, 255, 0.712), rgba(51, 90, 161, 0.712)), url(../img/newbanner1.jpg) left top no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    display: flex;
+    
+}
+
+.standred-install{
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    align-content: center;
+    text-align: center;
+    margin:2vh 0;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.standred-install p{
+    text-align: center;
+}
+
+.standred-install a:link,
+.standred-install a:visited{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.standred-install a:hover,
+.standred-install a:focus{
+    color: #1853e7;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.custom-install{
+    background: #fff;
+    color: #000;
+    border-radius: 15px;
+    padding: 15px;
+    align-content: center;
+    text-align: center;
+    margin:2vh 0;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.custom-install a:link,
+.custom-install a:visited{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+.custom-install a:hover,
+.custom-install a:focus{
+    color: #1853e7;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* Media queries */
+
+@media (min-width: 300px) and (max-width: 479.99px) { 
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    code{
+        background-color: #fff;
+        text-align: center;
+        padding: 2px 5px;
+        color:#000;
+        font-size: 14px;
+    }
+    .custom_installsection{
+        width:100%;
+        background: linear-gradient(to right bottom, rgba(110, 161, 255, 0.712), rgba(51, 90, 161, 0.712)), url(../img/newbanner1.jpg) left top no-repeat;
+        background-size: cover;
+        padding: 6vh 0;
+        height: 100vh;
+    }
+
+ }
+
+
+ @media (min-width: 480px) and (max-width: 767.99px) { 
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    code{
+        background-color: #fff;
+        text-align: center;
+        padding: 5px 8px;
+        color:#000;
+        font-size: 16px;
+    }
+
+ }
