@@ -298,12 +298,16 @@ a:hover{
 #install_window li h4{
     font-size: 21px;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 25px;
     color: #fff;
     text-align: left;
     margin-top: 10px;
     padding:10px 0;
 }
+
+#install_window li a:hover{
+    color: rgb(6, 2, 68);
+    }
 
 #install_window li span{
     font-size: 16px;
