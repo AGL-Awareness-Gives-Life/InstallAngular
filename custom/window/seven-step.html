@@ -1,0 +1,157 @@
+<!DOCTYPE>
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Install Angular | A How To Guide</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../css/imagehover.min.css" rel="stylesheet"/>
+        <link href="../../css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../../css/animate.min.css" rel="stylesheet"/>
+        <link href="../../css/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        
+        <header id="chooseos_header">
+            <div class="container">
+                <h1><a href="../../index.html" title="">InstallAngular.com</a> </h1>
+            </div>
+
+        </header>
+        <!-- Header Ends here -->
+
+ 
+<section id="install_window">
+    <div class="container">
+            
+        <ul>
+            <li>
+                <h2>Configure BrowserSync</h2>
+                <h4>1. I created a file called <strong>bs-config.js</strong> in the example folder and added the configuration statements shown below-</h4>
+                
+                <p>
+                    <xmp>
+                        module.exports = {
+                            ghostMode: false,
+                            reloadDelay: 1000,
+                            reloadDebounce: 1000,
+                            injectChanges: false,
+                            minify: false
+                            }
+                    </xmp>
+                </p>
+            </li>    
+            <li>
+                <h4>2. The BrowserSync Configuration Options for Angular Applications</h4>
+                <table class="table table-bordered">
+                        <thead>
+                            <th>Name</th>
+                            <th>Discription</th>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <td>
+                                           ghostMode
+                                        </td>
+                                        <td>
+                                                This option controls the event synchronization between browsers shown. The value false disables this feature.
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                                reloadDelay
+                                        </td>
+                                        <td>
+                                                This option delays the update message being sent to browsers after a file change is detected. This is useful to prevent repeated reloads
+                                                when the TypeScript compiler writes multiple JavaScript files.
+    
+                                        </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                            reloadDebounce
+                                    </td>
+                                    <td>
+                                        This option prevents BrowserSync from sending reload messages to the browsers until after the specified period has passed.
+                                        
+                                    </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                       injectChanges
+                                    </td>
+                                    <td>
+                                            Setting this option to false prevents BrowserSync from trying to inject some changes into the existing document rather than performing a
+                                            reload.
+                                    </td>
+                                </tr>
+    
+                                
+    
+                            <tr>
+                                    <td>
+                                            minify
+                                    </td>
+                                    <td>
+                                            Setting this option to false prevents BrowserSync from minifying JavaScript files.
+                                    </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+            </li>   
+            
+            <li>
+                <h4>3. Start the watch process by using following command</h4>
+                <p>
+                    <xmp>
+                        npm run tscwatch
+                    </xmp>
+                </p>
+            </li>
+            
+            
+            
+                
+
+            
+        </ul>
+
+        <a href="six-step.html" type="button" class="btn btn-lg btn-warning pull-left">Previous</a>
+        <!-- <button type="button" class="btn btn-default">Middle</button> -->
+        <a href="eight-step.html" type="button" class="btn btn-lg btn-success pull-right">Next</a>
+
+    </div>
+</section>        
+<!-- End Section Here -->
+
+
+<!-- Footer starts here -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <h3 class="footer_title pull-left">
+               <a href="">Install Angular | A How To Guide</a> 
+            </h3>
+            <div class="col-sm-3 footer_right pull-right">
+                    © Copyright Reserved 2018
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>

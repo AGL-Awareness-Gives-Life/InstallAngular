@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Install Angular | A How To Guide</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../css/imagehover.min.css" rel="stylesheet"/>
+        <link href="../../css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../../css/animate.min.css" rel="stylesheet"/>
+        <link href="../../css/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        
+        <header id="chooseos_header">
+            <div class="container">
+                <h1><a href="index.html" title="">InstallAngular.com</a> </h1>
+            </div>
+
+        </header>
+        <!-- Header Ends here -->
+
+ 
+<section id="install_window">
+    <div class="container">
+            
+        <ul>
+            <li>
+                <h2>Time to Download and Install NodeJS!</h2>
+                <h4>1. What is NodeJS?</h4>
+                <p>Node.js® is basically a runtime environment for executing JavaScript code outside the browser. Node provides us useful tools like NPM, which are needed for developing Angular Projects.</p>
+                <h4>2. How to Download NodeJS?</h4>
+                <p>Visit the site <a href="https://nodejs.org/en/"> <em>Nodejs.org</em> </a> and choose stable version (Recommended For Most Users) to download NodeJS Installer.</p>
+                <p class=" wow slideInLeft"><img src="../../img/nodejs.PNG" class="img-responsive"/></p>
+                <h4>3. How to Verify the nodeJS version? </h4>  
+                <p> Open Up command prompt and type <strong>"node -- version"</strong>. You should be able to see the nodeJS version. </p>
+                <p> Minimum version required for angular is 6.9.x </p>  
+                <p><img src="../../img/checknode.PNG" class="img-responsive"/></p>
+            </li>
+
+        <a href="choose_os.html" type="button" class="btn btn-lg btn-warning pull-left">Previous</a>
+        <!-- <button type="button" class="btn btn-default">Middle</button> -->
+        <a href="second-step.html" type="button" class="btn btn-lg btn-success pull-right">Next</a>
+
+    </div>
+</section>        
+<!-- End Section Here -->
+
+
+<!-- Footer starts here -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <h3 class="footer_title pull-left">
+               <a href="">Install Angular | A How To Guide</a> 
+            </h3>
+            <div class="col-sm-3 footer_right pull-right">
+                    © Copyright Reserved 2018
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();
+</script>
+    </body>
+
+</html>

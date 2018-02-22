@@ -1,0 +1,132 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Install Angular | A How To Guide</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../css/imagehover.min.css" rel="stylesheet"/>
+        <link href="../../css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../../css/animate.min.css" rel="stylesheet"/>
+        <link href="../../css/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        
+        <header id="chooseos_header">
+            <div class="container">
+                <h1><a href="index.html" title="">InstallAngular.com</a> </h1>
+            </div>
+
+        </header>
+        <!-- Header Ends here -->
+
+ 
+<section id="install_window">
+    <div class="container">
+            
+        <ul>
+            <li>
+                <h2>Create the project structure</h2>
+                <h4>1. The easiest way to create Angular project need two folders.</h4>
+                <p>Main folder will contain all project related files, as well as an "app" folder inside it.</p>
+                <table class="table table-bordered">
+                    <thead>
+                        <th>Name</th>
+                        <th>Discription</th>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                    <td>
+                                        example
+                                    </td>
+                                    <td>
+                                        This is the root folder and it have all the project related files and configration files.
+                                    </td>
+                            </tr>
+                            <tr>
+                                    <td>
+                                        example/app
+                                    </td>
+                                    <td>
+                                       This folder contains Angular code files.
+                                    </td>
+                            </tr>
+
+                    </tbody>
+                </table>
+                <h4>2. Create a HTML document in root folder.</h4>
+                <p>After creating HTML file, add the content given below:</p>
+                <p>
+                    <xmp>
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                        <title>Angular</title>
+                        <meta charset="utf-8" />
+                        </head>
+                        <body>
+                        <app>This is static content</app>
+                        </body>
+                        </html>
+                        
+                    </xmp>
+                    
+                </p>
+                <span><strong>"app"</strong> is a custom element to show dynamic content.</span>
+                
+                   
+                
+            </li>
+
+        <a href="choose_os.html" type="button" class="btn btn-lg btn-warning pull-left">Previous</a>
+        <!-- <button type="button" class="btn btn-default">Middle</button> -->
+        <a href="second-step.html" type="button" class="btn btn-lg btn-success pull-right">Next</a>
+
+    </div>
+</section>        
+<!-- End Section Here -->
+
+
+<!-- Footer starts here -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <h3 class="footer_title pull-left">
+               <a href="">Install Angular | A How To Guide</a> 
+            </h3>
+            <div class="col-sm-3 footer_right pull-right">
+                    © Copyright Reserved 2018
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();
+</script>
+    </body>
+
+</html>

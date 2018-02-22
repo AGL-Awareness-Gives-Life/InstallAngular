@@ -1,0 +1,279 @@
+<!DOCTYPE>
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Install Angular | A How To Guide</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../css/imagehover.min.css" rel="stylesheet"/>
+        <link href="../../css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../../css/animate.min.css" rel="stylesheet"/>
+        <link href="../../css/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        
+        <header id="chooseos_header">
+            <div class="container">
+                <h1><a href="../../index.html" title="">InstallAngular.com</a> </h1>
+            </div>
+
+        </header>
+        <!-- Header Ends here -->
+
+ 
+<section id="install_window">
+    <div class="container">
+            
+        <ul>
+            <li>
+                <h2>Starting Creating Angular Application</h2>
+                <h4>1. Creating the Descriptive Model Class</h4>
+                <p>Add a file called <strong>product.model.ts</strong> to the <strong>app folder</strong> and put the code shown below, in it.</p>
+                <p>
+                    <xmp>
+                            export class Product {
+                                constructor(public id?: number,
+                                public name?: string,
+                                public category?: string,
+                                public price?: number) {}
+                                }
+                    </xmp>
+                </p>
+                
+                
+            </li> 
+            
+            <li>
+                    <h4>2. Creating the Data Source</h4>
+                <p>Add a file called <strong>datasource.model.ts</strong> to the <strong>app folder</strong> and put the code shown below, in it.</p> 
+                <p>
+                    <xmp>
+                            import {Product} from "./product.model";
+                            export class SimpleDataSource {
+                            private data:Product[];
+                            constructor() {
+                            this.data = new Array<Product>(
+                            new Product(1, "Kayak", "Watersports", 275),
+                            new Product(2, "Lifejacket", "Watersports", 48.95),
+                            new Product(3, "Soccer Ball", "Soccer", 19.50),
+                            new Product(4, "Corner Flags", "Soccer", 34.95),
+                            new Product(5, "Thinking Cap", "Chess", 16));
+                            }
+                            getData(): Product[] {
+                            return this.data;
+                            }
+                            }
+                    </xmp>
+                </p>
+
+            </li>
+
+            <li>
+                <h4>3. Creating the Model Repository</h4>
+                    <p>Add a file called <strong>repository.model.ts</strong> to the <strong>app folder</strong> and put the code shown below, in it.</p> 
+                    <p>
+                        <xmp>
+                                import { Product } from "./product.model";
+                                import { SimpleDataSource } from "./datasource.model";
+                                export class Model {
+                                private dataSource: SimpleDataSource;
+                                private products: Product[];
+                                private locator = (p:Product, id:number) => p.id == id;
+                                constructor() {
+                                this.dataSource = new SimpleDataSource();
+                                this.products = new Array<Product>();
+                                this.dataSource.getData().forEach(p => this.products.push(p));
+                                }
+                                getProducts(): Product[] {
+                                return this.products;
+                                }
+                                getProduct(id: number) : Product {
+                                return this.products.find(p => this.locator(p, id));
+                                }
+                                saveProduct(product: Product) {
+                                if (product.id == 0 || product.id == null) {
+                                product.id = this.generateID();
+                                this.products.push(product);
+                                } else {
+                                let index = this.products
+                                .findIndex(p => this.locator(p, product.id));
+                                this.products.splice(index, 1, product);
+                                }
+                                }
+                                deleteProduct(id: number) {
+                                let index = this.products.findIndex(p => this.locator(p, id));
+                                if (index > -1) {
+                                this.products.splice(index, 1);
+                                }
+                                }
+                                private generateID(): number {
+                                let candidate = 100;
+                                while (this.getProduct(candidate) != null) {
+                                candidate++;
+                                }
+                                return candidate;
+                                }
+                                }
+                        </xmp>
+                    </p>
+    
+                </li>
+
+                <li>
+                    <h4>4. Creating the Template and Root Component</h4>
+                    <p>Add a file called <strong>template.html</strong> to the <strong>app folder</strong> and put the code shown below, in it.</p> 
+                    <p>
+                        <xmp>
+                        <div class="bg-info p-a-1">
+                        There are {{model.getProducts().length}} products in the model
+                        </div>
+                        </xmp>
+                    </p>
+
+                    <p>Add a file called <strong>component.ts</strong> to the <strong>app folder</strong> and put the code shown below, in it.</p> 
+                        <p>
+                            <xmp>
+                                    import { Component } from "@angular/core";
+                                    import { Model } from "./repository.model";
+                                    @Component({
+                                    selector: "app",
+                                    templateUrl: "app/template.html"
+                                    })
+                                    export class ProductComponent {
+                                    model: Model = new Model();
+                                    }
+                            </xmp>
+                        </p>
+                </li>
+
+            <li>
+                <h4>
+                    5. Creating the Angular Module
+                </h4>
+                <p>Add a file called <strong>app.module.ts</strong> (this is the conventional name use for the root module) to the <strong>app folder</strong> and put the code shown below, in it.</p> 
+                <p>
+                    <xmp>
+                            import { NgModule } from "@angular/core";
+                            import { BrowserModule } from "@angular/platform-browser";
+                            import { ProductComponent } from "./component";
+                            @NgModule({
+                            imports: [BrowserModule],
+                            declarations: [ProductComponent],
+                            bootstrap: [ProductComponent]
+                            })
+                            export class AppModule {}
+                    </xmp>
+                </p>
+            </li> 
+            
+            <li>
+                <h4>
+                    6. Bootstrapping the Application
+                </h4>
+                <p>Add a file called <strong>main.ts</strong> to the <strong>app folder</strong> and put the code shown below, in it.</p> 
+                <p>
+                    <xmp>
+                            import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+                            import { AppModule } from './app.module';
+                            platformBrowserDynamic().bootstrapModule(AppModule);
+                    </xmp>
+                </p>
+            </li>
+
+            <li>
+                <h4>
+                    6. Configure System.js
+                </h4>
+                <p>Add a file called <strong>systemjs.config.js</strong> to the <strong>example folder</strong> and put the code shown below, in it.</p> 
+                <p>
+                    <xmp>
+                            (function(global) {
+                                var paths = {
+                                "rxjs/*": "node_modules/rxjs/bundles/Rx.min.js",
+                                "@angular/*": "node_modules/@angular/*"
+                                }
+                                var packages = { "app": {} };
+                                var angularModules = ["common", "compiler",
+                                "core", "platform-browser", "platform-browser-dynamic"];
+                                angularModules.forEach(function(pkg) {
+                                packages["@angular/" + pkg] = {
+                                main: "/bundles/" + pkg + ".umd.min.js"
+                                };
+                                });
+                                System.config({ paths: paths, packages: packages });
+                                })(this);
+                    </xmp>
+                </p>
+            </li>
+
+            <li>
+                    <h4>
+                        6. Updating the HTML Document
+                    </h4>
+                   
+                    <p>
+                        <xmp>
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                        <title></title>
+                        <meta charset="utf-8" />
+                        <script src="node_modules/classlist.js/classList.min.js"></script>
+                        <script src="node_modules/core-js/client/shim.min.js"></script>
+                        <script src="node_modules/zone.js/dist/zone.min.js"></script>
+                        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+                        <script src="node_modules/systemjs/dist/system.src.js"></script>
+                        <script src="systemjs.config.js"></script>
+                        <script>
+                        System.import("app/main").catch(function(err){ console.error(err); });
+                        </script>
+                        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+                        rel="stylesheet" />
+                        </head>
+                        <body class="m-a-1">
+                        <app></app>
+                        </body>
+                        </html>          
+                        </xmp>
+                    </p>
+                </li>
+
+            
+        </ul>
+
+        <a href="eight-step.html" type="button" class="btn btn-lg btn-warning pull-left">Previous</a>
+        <!-- <button type="button" class="btn btn-default">Middle</button> -->
+        <a href="#" type="button" class="btn btn-lg btn-success pull-right">Next</a>
+
+    </div>
+</section>        
+<!-- End Section Here -->
+
+
+<!-- Footer starts here -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <h3 class="footer_title pull-left">
+               <a href="">Install Angular | A How To Guide</a> 
+            </h3>
+            <div class="col-sm-3 footer_right pull-right">
+                    © Copyright Reserved 2018
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>

@@ -264,6 +264,7 @@ a:hover{
 }
 
 #install_window h2{
+    font-family: 'PT Sans', sans-serif;
     font-size: 35px;
     line-height: 38px;
     margin-bottom: 40px;
@@ -278,26 +279,21 @@ a:hover{
 }
 
 #install_window li p{
+    font-family: 'Roboto', sans-serif;
     font-size: 17px;
     font-weight: 300;
-    line-height: 20px;
+    line-height: 25px;
     color: #fff;
     text-align: left;
     margin-top: 10px;
-    padding:10px 0;
+    padding:2px 0;
 }
 
-#install_window li h2{
-    font-size: 35px;
-    line-height: 38px;
-    margin-bottom: 40px;
-    color: rgb(30, 36, 39);
-    text-align: center;
-}
-
-#install_window li h4{
-    font-size: 21px;
-    font-weight: 500;
+#install_window li p a:link,
+#install_window li p a:visited{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
     line-height: 25px;
     color: #fff;
     text-align: left;
@@ -305,19 +301,67 @@ a:hover{
     padding:10px 0;
 }
 
-#install_window li a:hover{
-    color: rgb(6, 2, 68);
-    }
+#install_window li h2{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 38px;
+    margin-bottom: 40px;
+    color:#ffcb5b;
+    text-align: center;
+    
+}
+
+#install_window li h4{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #8fe044;;
+    text-align: left;
+    margin-top: 10px;
+    padding:10px 0;
+}
 
 #install_window li span{
     font-size: 16px;
     display: block;
     font-weight: 300;
     line-height: 18px;
-    color: rgb(206, 227, 255);
+    color:rgb(58, 58, 58);
     text-align: left;
-    margin-top: 10px;
+    margin-top: 11px;
+    margin-bottom: 11px;
     
+}
+pre {
+    color: #000 !important;
+    background-color: #fbedbb;
+    padding: 6px;
+    font: 9pt Consolas,"Courier New",Courier,mono;
+    white-space: pre;
+    overflow: auto !important;
+    border: solid 1px #fbedbb;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    -webkit-tab-size: 4;
+    tab-size: 4;
+}
+
+th{
+    background-color: #fff;
+    color: #000;
+}
+
+td{
+    background-color: #24c7dc;
+    color: #000;
+}
+
+xmp{
+    background-color: #fff;
+    color: #000; 
 }
 
 /* #install_window li span::before{

@@ -1,0 +1,213 @@
+<!DOCTYPE>
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Install Angular | A How To Guide</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../css/imagehover.min.css" rel="stylesheet"/>
+        <link href="../../css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../../css/animate.min.css" rel="stylesheet"/>
+        <link href="../../css/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        
+        <header id="chooseos_header">
+            <div class="container">
+                <h1><a href="../../index.html" title="">InstallAngular.com</a> </h1>
+            </div>
+
+        </header>
+        <!-- Header Ends here -->
+
+ 
+<section id="install_window">
+    <div class="container">
+            
+        <ul>
+            <li>
+                    <h2>Download and Install using NPM </h2>
+                    <p>After adding dependencies & packages in <strong>package.json</strong> file, run the <strong>"npm install"</strong> command </p>
+                    <p> NPM will download the packages mentioned in <strong>package.json</strong> and install them in a folder <strong>"node_modules"</strong></p>
+                    <h4>1. Why use NPM?</h4>  
+                    <p>
+                        It is the standard mechanism for managing JavaScript packages.
+                        The world of JavaScript development has fragmented into an incredible number of small and focused packages that are woven together to create rich and fluid functionality.
+                        Manually downloading the packages required for a project means working through a long list of dependencies, each of which has to be downloaded, installed, and inspected for its own dependencies.
+                        Dependencies between packages can be specified loosely, allowing NPM some flexibility in the version it selects.
+    
+                    </p> 
+                    <h4>2. Understanding the Dependencies Packages</h4>  
+                    <table class="table table-bordered">
+                        <thead>
+                            <th>Name</th>
+                            <th>Discription</th>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <td>
+                                            @angular/*
+                                        </td>
+                                        <td>
+                                            These packages provide the Angular functionality, which is split into separate modules. Each module provides a different set of features,
+                                            and the modules are a good foundation for new web applications. I add other modules in later chapters to support specific
+                                            features, such as working with HTML forms.
+                                            
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                            reflectmetadata
+                                        </td>
+                                        <td>
+                                            This package implements a reflection API that is used to inspect decorators on classes.
+    
+                                        </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        rxjs
+                                    </td>
+                                    <td>
+                                        This is the Reactive Extensions package, which is used to implement the Angular change-detection system that is used in data bindings,
+                                        , and used directly for some Angular features.
+                                    </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        zone.js
+                                    </td>
+                                    <td>
+                                        This is the Zone.js package, which provides an execution context for asynchronous tasks and is used to evaluate template expressions.
+                                    </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        core-js
+                                    </td>
+                                    <td>
+                                        The Core-JS package provides support for new JavaScript features for browsers that don't implement them.
+                                    </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        classlist.js
+                                    </td>
+                                    <td>
+                                        This package provides missing features required for IE9.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        systemjs
+                                    </td>
+                                    <td>
+                                        This package is the module loader, which is described in the "Configuring the JavaScript Module Loader" section.
+                                    </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        bootstrap
+                                    </td>
+                                    <td>
+                                        Bootstrap is the CSS framework that I use to style HTML content throughout this book.
+                                    </td>
+                                </tr>
+    
+                        </tbody>
+                    </table>
+    
+                    <h4>3. Understanding the Development Dependencies Packages</h4>  
+                    <table class="table table-bordered">
+                        <thead>
+                            <th>Name</th>
+                            <th>Discription</th>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <td>
+                                            lite-server
+                                        </td>
+                                        <td>
+                                            This is the package that provides the development HTTP server used throughout this book. See the "Configuring the Development HTTP
+                                            Server" section for details.
+                                            
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                            typescript
+                                        </td>
+                                        <td>
+                                            This is the package that provides TypeScript language support, including the compiler. See the "Setting Up TypeScript" section for details.
+    
+                                        </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        typings
+                                    </td>
+                                    <td>
+                                        This is the package that provides type information for popular JavaScript packages so they can be used more conveniently with TypeScript.
+                                        See the "Setting Up TypeScript" section for details.
+                                        
+                                    </td>
+                                </tr>
+    
+                                <tr>
+                                    <td>
+                                        concurrently
+                                    </td>
+                                    <td>
+                                        This package allows multiple commands to be run by npm at the same time. See the "Starting the Watch Processes" section for details.
+                                    </td>
+                                </tr>
+    
+                                
+    
+                        </tbody>
+                    </table>
+            </li>
+
+        <a href="second-step.html" type="button" class="btn btn-lg btn-warning pull-left">Previous</a>
+        <!-- <button type="button" class="btn btn-default">Middle</button> -->
+        <a href="fourth-step.html" type="button" class="btn btn-lg btn-success pull-right">Next</a>
+
+    </div>
+</section>        
+<!-- End Section Here -->
+
+
+<!-- Footer starts here -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <h3 class="footer_title pull-left">
+               <a href="">Install Angular | A How To Guide</a> 
+            </h3>
+            <div class="col-sm-3 footer_right pull-right">
+                    © Copyright Reserved 2018
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE>
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Install Angular | A How To Guide</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../css/imagehover.min.css" rel="stylesheet"/>
+        <link href="../../css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../../css/animate.min.css" rel="stylesheet"/>
+        <link href="../../css/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        
+        <header id="chooseos_header">
+            <div class="container">
+                <h1><a href="../../index.html" title="">InstallAngular.com</a> </h1>
+            </div>
+
+        </header>
+        <!-- Header Ends here -->
+
+ 
+<section id="install_window">
+    <div class="container">
+            
+        <ul>
+            <li>
+                <h2>Setting Up Typescript</h2>
+                <p>TypeScript uses type definition files to make it easier to work with JavaScript libraries that have been written in plain JavaScript</p>
+                <h4>1. <strong>Run the commands</strong> given below in <strong>example folder</strong> to download and install the typing definitions.</h4>
+                <p>
+                    <xmp>
+                            npm run typings -- install dt~core-js --save --global
+                            npm run typings -- install dt~node --save --global
+                    </xmp>
+                </p>
+            </li>    
+            <li>
+                <h4>2. The Contents of the typings.json File in the example Folder</h4>
+
+                <p>
+                        <xmp>
+                        {
+                        "globalDependencies": {
+                        "core-js": "registry:dt/core-js#0.0.0+20160914114559",
+                        "node": "registry:dt/node#6.0.0+20161110151007"
+                        }
+                        }
+                        </xmp>
+                    </p>
+            </li>    
+            <li>
+                <h4>3. Configuring the TypeScript Compiler</h4>  
+                <p>The TypeScript compiler needs a configuration file to prepare it for use in an Angular project.</p>  
+                <p>Create <strong>tsconfig.json</strong> in example folder and add the content given below</p>
+                <p>
+                    <xmp>
+                            {
+                                "compilerOptions": {
+                                "target": "es5",
+                                "module": "commonjs",
+                                "moduleResolution": "node",
+                                "emitDecoratorMetadata": true,
+                                "experimentalDecorators": true
+                                },
+                                "exclude": [ "node_modules" ]
+                                }
+                    </xmp>
+                </p>
+            </li>
+            
+            <li>
+              <h4>4. The TypeScript Compiler Options for Angular Applications</h4>   
+              <table class="table table-bordered">
+                    <thead>
+                        <th>Name</th>
+                        <th>Discription</th>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                    <td>
+                                       target
+                                    </td>
+                                    <td>
+                                            This setting specifies the JavaScript version that the compiler will target. The compiler will translate TypeScript features into
+                                            plain JavaScript code uses only the features of the specified version. The es5 setting corresponds to the ES5 standard,
+                                            which is supported by most browsers, including legacy versions, and covers most of the browsers supported by Angular.
+                                        
+                                    </td>
+                            </tr>
+                            <tr>
+                                    <td>
+                                        module
+                                    </td>
+                                    <td>
+                                            This setting specifies the format used to create JavaScript modules, and it should correspond to the loader used for the
+                                            project. The listing specified commonjs, which creates modules that can be used with a wide range of JavaScript module
+                                            loaders, including SystemJS, which is introduced in the "Configuring the JavaScript Module Loader" section
+
+                                    </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                        moduleResolution
+                                </td>
+                                <td>
+                                        This setting specifies how the compiler deals with import statements. The node value looks for package in the
+                                        node_modules folder, which is where they are placed by NPM.
+                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    emitDecoratorMetadata
+                                </td>
+                                <td>
+                                  When true, the compiler includes information about the decorator that can be accessed using the reflectmetadata
+                                    package. This is required for Angular applications.
+                                </td>
+                            </tr>
+
+                            
+
+                        <tr>
+                                <td>
+                                        exclude
+                                </td>
+                                <td>
+                                        This setting is required by the emitDecoratorMetadata setting.
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+
+            <li>
+
+                <h4>5. To test the compiler, we need to add a file called <strong>compilertest.ts</strong> in example folder. </h4>
+                <p>Put the content mention below in <strong>compilertest.ts</strong> file. </p>
+                <p>
+                    <xmp>
+                            export class Test {
+                                constructor(public message: string) {}
+                                }
+                    </xmp>
+                </p>
+            </li>
+
+            <li>
+                <h4>
+                    6. Run the following command in <strong>"example folder"</strong> to test the compiler.
+                </h4>
+                <p>
+                        <xmp>
+                           npm run tsc
+                        </xmp>
+                    </p>
+            </li>
+
+            <li>
+                <p> The test class should compile without problems and produce a file
+                        called <strong>compilertest.js</strong> in the example folder</p>
+            </li>
+                
+
+            
+        </ul>
+
+        <a href="third-step.html" type="button" class="btn btn-lg btn-warning pull-left">Previous</a>
+        <!-- <button type="button" class="btn btn-default">Middle</button> -->
+        <a href="five-step.html" type="button" class="btn btn-lg btn-success pull-right">Next</a>
+
+    </div>
+</section>        
+<!-- End Section Here -->
+
+
+<!-- Footer starts here -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <h3 class="footer_title pull-left">
+               <a href="">Install Angular | A How To Guide</a> 
+            </h3>
+            <div class="col-sm-3 footer_right pull-right">
+                    © Copyright Reserved 2018
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>
